@@ -1,0 +1,698 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    color: #eeeeee;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    /* FUNDO */
+
+    background:
+
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(105, 44, 140, 0.35),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            to bottom,
+            #090511,
+            #150a20 50%,
+            #050308
+        );
+
+}
+
+
+/* =========================
+   LUA
+========================= */
+
+.lua {
+
+    position: fixed;
+
+    top: 45px;
+    right: 90px;
+
+    font-size: 85px;
+
+    filter:
+        drop-shadow(
+            0 0 25px rgba(255, 255, 180, 0.5)
+        );
+
+    animation: flutuar 4s ease-in-out infinite;
+
+}
+
+
+/* =========================
+   ESTRELAS
+========================= */
+
+.estrelas {
+
+    position: fixed;
+
+    top: 100px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #d7b7ff;
+
+    font-size: 20px;
+
+    opacity: 0.6;
+
+}
+
+
+/* =========================
+   DECORAÇÕES
+========================= */
+
+.decoracao {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+}
+
+
+.morcegos {
+
+    top: 18%;
+
+    left: 8%;
+
+    font-size: 30px;
+
+    animation:
+        voar 8s linear infinite;
+
+}
+
+
+.fantasmas {
+
+    top: 65%;
+
+    right: 5%;
+
+    font-size: 35px;
+
+    opacity: 0.7;
+
+    animation:
+        flutuar 4s ease-in-out infinite;
+
+}
+
+
+.aboboras {
+
+    bottom: 25px;
+
+    left: 25px;
+
+    font-size: 35px;
+
+    animation:
+        flutuar 3s ease-in-out infinite;
+
+}
+
+
+.teia {
+
+    position: fixed;
+
+    font-size: 100px;
+
+    opacity: 0.4;
+
+}
+
+
+.teia1 {
+
+    top: -15px;
+
+    left: -10px;
+
+}
+
+
+.teia2 {
+
+    top: -15px;
+
+    right: -10px;
+
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 20px;
+
+    z-index: 5;
+
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+    text-align: center;
+
+    padding: 50px 45px;
+
+    border-radius: 22px;
+
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(24, 12, 34, 0.97),
+            rgba(10, 6, 16, 0.97)
+        );
+
+
+    border:
+
+        1px solid
+        rgba(166, 77, 255, 0.6);
+
+
+    box-shadow:
+
+        0 0 40px
+        rgba(123, 44, 170, 0.25),
+
+        inset 0 0 30px
+        rgba(0, 0, 0, 0.5);
+
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* brilho interno */
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 300px;
+    height: 200px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(151, 60, 210, 0.18),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo-icone {
+
+    font-size: 65px;
+
+    margin-bottom: 10px;
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(255, 120, 0, 0.5)
+        );
+
+    animation:
+
+        flutuar 3s ease-in-out infinite;
+
+}
+
+
+h1 {
+
+    font-size: 2.4rem;
+
+    color: #ff8c00;
+
+    text-shadow:
+
+        0 0 10px rgba(255, 115, 0, 0.7),
+
+        0 0 30px rgba(255, 80, 0, 0.2);
+
+}
+
+
+.linha {
+
+    width: 80%;
+
+    height: 1px;
+
+    margin: 20px auto 30px;
+
+    background:
+
+        linear-gradient(
+            to right,
+            transparent,
+            #9b4dcc,
+            transparent
+        );
+
+}
+
+
+/* =========================
+   DESAFIO
+========================= */
+
+.numero {
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #b77aff;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+h2 {
+
+    font-size: 1.45rem;
+
+    line-height: 1.5;
+
+    margin-bottom: 35px;
+
+    color: #f1e8ff;
+
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+input {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    border:
+
+        1px solid
+        #56356b;
+
+
+    background:
+
+        rgba(5, 3, 9, 0.9);
+
+
+    color: white;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+input:focus {
+
+    border-color: #ff8c00;
+
+    box-shadow:
+
+        0 0 15px
+        rgba(255, 140, 0, 0.2);
+
+}
+
+
+input::placeholder {
+
+    color: #75677d;
+
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+button {
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff8c00,
+            #d45100
+        );
+
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+
+        0 7px 20px
+        rgba(255, 100, 0, 0.3);
+
+}
+
+
+button:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* =========================
+   MENSAGEM
+========================= */
+
+#mensagem {
+
+    min-height: 24px;
+
+    margin-top: 18px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.escondido {
+
+    display: none;
+
+}
+
+
+.trofeu {
+
+    font-size: 80px;
+
+    margin-bottom: 10px;
+
+    animation:
+
+        flutuar 3s ease-in-out infinite;
+
+}
+
+
+.titulo-final {
+
+    color: #ff8c00;
+
+    margin-bottom: 15px;
+
+}
+
+
+.texto-final {
+
+    font-size: 18px;
+
+}
+
+
+.premio {
+
+    margin: 25px 0;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    border:
+
+        1px solid
+        #ff8c00;
+
+
+    background:
+
+        rgba(255, 140, 0, 0.08);
+
+
+    color: #ffad42;
+
+    font-weight: bold;
+
+    box-shadow:
+
+        0 0 20px
+        rgba(255, 120, 0, 0.15);
+
+}
+
+
+.discord {
+
+    color: #aaa;
+
+}
+
+
+/* =========================
+   CHÃO
+========================= */
+
+.chao {
+
+    position: fixed;
+
+    bottom: 15px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 30px;
+
+    opacity: 0.8;
+
+    z-index: 2;
+
+}
+
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes flutuar {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+
+    }
+
+}
+
+
+@keyframes voar {
+
+    0% {
+
+        transform:
+            translateX(-20px)
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(150px)
+            translateY(-40px);
+
+    }
+
+    100% {
+
+        transform:
+            translateX(-20px)
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .card {
+
+        padding:
+            35px 25px;
+
+    }
+
+
+    h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    h2 {
+
+        font-size: 1.2rem;
+
+    }
+
+
+    .lua {
+
+        right: 20px;
+
+        font-size: 55px;
+
+    }
+
+
+    .morcegos {
+
+        left: 2%;
+
+        font-size: 20px;
+
+    }
+
+
+    .fantasmas {
+
+        right: 1%;
+
+        font-size: 25px;
+
+    }
+
+}
